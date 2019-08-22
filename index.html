@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>awesome-utable API documentation</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>awesome-utable</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>utable</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>utable</code></h1>
+<p>Table manipulation functions to complement AwesomeWM's gears.table.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2019 James Reed</li>
+        <li><strong>Author</strong>: James Reed &lt;jcrd@tuta.io&gt;</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#group">group (func, tbl)</a></td>
+	<td class="summary">Group items in a table into lists according to the key returned by func.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#filter">filter (func, tbl)</a></td>
+	<td class="summary">Get a new table containing the items in tbl that pass the filter function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#contains">contains (a, b)</a></td>
+	<td class="summary">Check if table a contains table b.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#equal">equal (a, b)</a></td>
+	<td class="summary">Check if table a and table b contain the same items.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#split">split (tbl, after)</a></td>
+	<td class="summary">Split a table into left and right segments.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#remove_item">remove_item (tbl, item)</a></td>
+	<td class="summary">Remove an item from a table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#remove">remove (a, b)</a></td>
+	<td class="summary">Remove items from table b that are found in table a.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#add">add (a, b)</a></td>
+	<td class="summary">Add items in table a to table b if they are not present.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#reduce">reduce (func, tbl)</a></td>
+	<td class="summary">Apply a reducer function to a table.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "group"></a>
+    <strong>group (func, tbl)</strong>
+    </dt>
+    <dd>
+    Group items in a table into lists according to the key returned by func.
+ func is given the current table value and must return the list key.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+         The function.
+        </li>
+        <li><span class="parameter">tbl</span>
+         The table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The new table.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "filter"></a>
+    <strong>filter (func, tbl)</strong>
+    </dt>
+    <dd>
+    Get a new table containing the items in tbl that pass the filter function.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+         The filter function.
+        </li>
+        <li><span class="parameter">tbl</span>
+         The table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The new table.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "contains"></a>
+    <strong>contains (a, b)</strong>
+    </dt>
+    <dd>
+    Check if table a contains table b.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a</span>
+         Haystack table.
+        </li>
+        <li><span class="parameter">b</span>
+         Needle table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        True if a contains b, otherwise false.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "equal"></a>
+    <strong>equal (a, b)</strong>
+    </dt>
+    <dd>
+    Check if table a and table b contain the same items.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a</span>
+         First table.
+        </li>
+        <li><span class="parameter">b</span>
+         Second table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        True if a and b are contain the same items, otherwise false.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "split"></a>
+    <strong>split (tbl, after)</strong>
+    </dt>
+    <dd>
+    Split a table into left and right segments.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tbl</span>
+         The table.
+        </li>
+        <li><span class="parameter">after</span>
+         The index after which to split.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        A table containing keys "l" and "r".
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "remove_item"></a>
+    <strong>remove_item (tbl, item)</strong>
+    </dt>
+    <dd>
+    Remove an item from a table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tbl</span>
+         The table.
+        </li>
+        <li><span class="parameter">item</span>
+         The item.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The new table.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "remove"></a>
+    <strong>remove (a, b)</strong>
+    </dt>
+    <dd>
+    Remove items from table b that are found in table a.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a</span>
+         Table of values to be removed.
+        </li>
+        <li><span class="parameter">b</span>
+         Removal table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The new table.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "add"></a>
+    <strong>add (a, b)</strong>
+    </dt>
+    <dd>
+    Add items in table a to table b if they are not present.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a</span>
+         Mixin table.
+        </li>
+        <li><span class="parameter">b</span>
+         Container table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The new table.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "reduce"></a>
+    <strong>reduce (func, tbl)</strong>
+    </dt>
+    <dd>
+    Apply a reducer function to a table.  The reducer function is given
+ two arguments: the accumulated value and the current table value. It must
+ return the new accumulated value.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+         The reducer function.
+        </li>
+        <li><span class="parameter">tbl</span>
+         The table.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The final accumulated value.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2019-08-22 12:09:17 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
